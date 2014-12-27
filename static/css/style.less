@@ -2,10 +2,61 @@
 
 // Variables
 @grey: #D3D3D3;
+@font-size-base: 16px;
+@container-desktop: 720px;
+@container-large-desktop: 720px;
+
+@font-family-sans-serif:  'Open Sans', sans-serif;
+@font-family-serif:       'Vollkorn', serif;
+@font-family-base:        @font-family-serif;
+
+h1, h2, h3, h4, h5 {
+  font-family: @font-family-sans-serif;
+  font-weight: 700;
+}
+
+.control-label {
+  font-weight: normal;
+}
+
+body {
+  padding-bottom: 40px;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 #hero {
-	background-color: @grey;
-	//background: url("http://placehold.it/1366x20");
-    //background-size: cover;
-    min-height: 250px;
+	background: url("../img/forest.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+#photo1 {
+	background: url("../img/brown_small.jpg");
+	background-size: cover;
+    background-position: center;
+    height: 100vh;   
+}
+
+#photo2 {
+  background: url("../img/lol.jpg");
+  background-size: cover;
+    background-position: center;
+    height: 100vh;   
+}
+
+.huge {
+  text-align: center;
+  padding-top: 60vh;
+  padding-bott: 10vh;
+  color: white;
+}
+
+.huge h1 {
+	font-size: 65px;
 }

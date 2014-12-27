@@ -23,8 +23,7 @@ def index():
 
     if request.method == 'POST':
         if form.validate() == False:
-            flash('All fields are required.')
-            return render_template('index.html', form=form)
+            return render_template('index.html', form=form, section='rsvp')
         else:
             msg = Message('Wedding RSVP', sender='thmcmahon@gmail.com', recipients=['thmcmahon@gmail.com'])
             msg.body = """
@@ -33,7 +32,7 @@ def index():
             Bus Y/N: %s
             """ % (form.names.data, form.email.data, form.reqs.data, form.bus.data)
             mail.send(msg)
-            return 'Form posted'
+            return render_template('index.html', form=form, section='rsvp', completed=True)
 
     elif request.method == 'GET':
         return render_template('index.html', form=form)
