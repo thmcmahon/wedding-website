@@ -50,7 +50,7 @@
                 <h2>
                     We're coming!
                 </h2>
-                <p class="lead">Fill in this quick form to RSVP. Don't forget to include any dietary requirements and whether or not you're taking the bus.</p>
+                <p class="lead">Fill in this quick form to RSVP. If you have any questions that we haven't covered, our contact details are at the bottom of the page.</p>
                 {% if completed == True %}
                 <p class="lead">Thanks for RSVPing {{ form.names.data }}!</p>
                 <p>Scroll down for all of the rest of the wedding deets</p>
@@ -125,6 +125,8 @@
                                 <p>0433 359 983 / <a href="mailto:thmcmahon@gmail.com">thmcmahon@gmail.com</a> </p></li>
                                 </div>
                             </section>
+                            <section class="container">
+                            <div class="center-block">Made with Flask, bootstrap and love by <a href="https://github.com/thmcmahon">Tom McMahon</a>, with special thanks to <a href="https://twitter.com/SirBarnalot">Karin Maier </a>for the photos.</div>
                         </div>
                     </div> <!-- Container -->
                     {% endblock %}

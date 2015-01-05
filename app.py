@@ -25,7 +25,7 @@ def index():
         if form.validate() == False:
             return render_template('index.html', form=form, section='rsvp')
         else:
-            msg = Message('Wedding RSVP', sender='thmcmahon@gmail.com', recipients=['thmcmahon@gmail.com'])
+            msg = Message('Wedding RSVP', sender='thmcmahon@gmail.com', recipients=['thmcmahon@gmail.com', 'esther.kumnick@gmail.com'])
             msg.body = """
             From: %s <%s>
             Dietary Requirements: %s
