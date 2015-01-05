@@ -27,10 +27,11 @@ def index():
         else:
             msg = Message('Wedding RSVP', sender='thmcmahon@gmail.com', recipients=['thmcmahon@gmail.com', 'esther.kumnick@gmail.com'])
             msg.body = """
+            Coming?: %s
             From: %s <%s>
             Dietary Requirements: %s
             Bus Y/N: %s
-            """ % (form.names.data, form.email.data, form.reqs.data, form.bus.data)
+            """ % (form.rsvp.data, form.names.data, form.email.data, form.reqs.data, form.bus.data)
             mail.send(msg)
             return render_template('index.html', form=form, section='rsvp', completed=True)
 
