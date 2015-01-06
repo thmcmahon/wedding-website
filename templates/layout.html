@@ -36,7 +36,10 @@
           document.getElementById('rsvp').scrollIntoView(true);
         }
         </script> 
-        <script>
+      <script>
+      // This script removes all of the images from the IOS7 and below version of the site
+      // this is because there's a bug with the way background-cover works on earlier versions
+      // of IOS
         function iOSversion() {
         if (/iP(hone|od|ad)/.test(navigator.platform)) {
         // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
@@ -44,11 +47,18 @@
         return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
         }
         }
-
+        $("#ios7").hide();
         ver = iOSversion();
 
         if (ver[0] < 8) {
-        alert('This is running iOS 7 or earlier.');
+        alert('You appear to be running IOS 7 or earlier. For the best experience view this site on IOS8 or another device.');
+
+        if(ver[0] < 8) {
+        $("#ios7").show();
+        $("#hero").hide();
+        $("#photo1").hide();
+        $("#photo2").hide();
+        }
         }
   </script>
   </body>
